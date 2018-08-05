@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>innerIframe</title>
+<style>
+*{text-align:center;}
+iframe {width: 100%; 
+        height:820px; 
+	    border:none;}
+.pageNo { margin:5px;
+          width:24px;
+		  height:20px; 
+		  text-align:center;
+		  outline:none;
+		  border:none;
+		  background-color:inherit;
+		  }
+.pageNo a{text-decoration:none;}
+.pageNo:hover { text-decoration:underline; 
+			    color:#069;}
+</style>
+</head>
+
+<body>
+      <button class="pageNo"><a href="mainpage1.html" target="mainpage">1</a></button>
+      <button class="pageNo"><a href="mainpage2.html" target="mainpage">2</a></button>
+      <button class="pageNo"><a href="mainpage3.html" target="mainpage">3</a></button>
+      <button class="pageNo"><a href="mainpage4.html" target="mainpage">4</a></button>
+      <button class="pageNo"><a href="mainpage5.html" target="mainpage">5</a></button>
+      <iframe src="mainpage1.html" name="mainpage" scrolling="no">
+      </iframe>
+      <button class="pageNo"><a href="mainpage1.html" target="mainpage">1</a></button>
+      <button class="pageNo"><a href="mainpage2.html" target="mainpage">2</a></button>
+      <button class="pageNo"><a href="mainpage3.html" target="mainpage">3</a></button>
+      <button class="pageNo"><a href="mainpage4.html" target="mainpage">4</a></button>
+      <button class="pageNo"><a href="mainpage5.html" target="mainpage">5</a></button>
+
+</body>
+</html>

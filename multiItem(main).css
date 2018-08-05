@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+.mainpage_item {
+	             box-sizing:border-box;
+                 width:100%;
+				 height:175px;
+				 float:left;}
+.mainpage_img {
+	             box-sizing:border-box;
+				 width: 30%;
+				 height:inherit;
+				 float:left;}
+.mainpage_img img {
+	               width:90%; 
+                   height: 100%;}
+.mainpage_name{
+	             box-sizing:border-box;
+				 width: 70%;
+				 height:inherit;
+				 padding:25px;
+				 float:left;}
+.mainpage_name a {
+                   font-size:28px;
+			       text-decoration:none;
+				   color:black;
+                   }
+.mainpage_name a:hover {
+	                     color:#0084C4;
+						 text-decoration:underline;
+                        }
+.mainpage_name span {font-size: 28px;
+                     margin-top: 25px;}
+
+
+

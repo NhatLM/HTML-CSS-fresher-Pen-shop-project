@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nut's pen shop</title>
+<style>
+body {margin:auto;}
+.d1 {box-sizing:border-box; 
+     width: 100%; 
+	 height: 220px; 
+	 float:left;
+	 position: relative;
+	 }
+.d1 img {width:100%; 
+         height:inherit;}
+.changebtn {position:absolute;
+            bottom: 5px; right: 580px;}
+.changebtn input {border:none; 
+                  border-radius:100%;
+				  margin-right:5px;
+				  height: 12px;
+				  width: 8px; 
+				  opacity: 0.65; 
+				  background-color:#C1EBFF;}
+
+.d2 {box-sizing:border-box; 
+     width: 100%; height: 50px; 
+     float:left;
+     padding-bottom: 4px;
+	 padding-top:7px;
+	 border-bottom: 1px solid #333;
+	 border-top:1px solid #333;
+	 background-color:#52A3A3;
+	 color: white;
+	 font-size: 36px; 
+	 text-align:center;
+	 }
+.d3 {
+	  width:100%;
+      height: 55px;
+	  float:left;
+	  font-family:Tahoma, Geneva, sans-serif;
+	  background-color:#F0F0F0;
+	  padding-left: 10px;
+	  padding-right:10px;
+	  box-sizing:border-box;
+	  z-index:1;
+	  opacity:0.88;
+	 }
+.d3 a img {
+	     float: left;
+		 height:50px;
+		 width:50px;
+	 }
+.dropdown {
+	        float:left;
+			overflow:hidden;
+          }
+.dropdown .dropbt {
+	                font-size:24px;
+					text-align:center;
+					outline:none;
+					border:none;
+					padding: 14px;
+					background-color:inherit;
+					margin-right: 12px;
+                   }
+.d3 a img:hover, .dropdown:hover .dropbt {
+    background-color: #6CCFFF;
+}
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+   
+}
+.dropdowncontent a {
+    float: none;
+    padding: 12px;
+	color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdowncontent a:hover {
+    background-color: #4AC5FF;
+}
+
+.dropdown:hover .dropdowncontent {
+    display: block;
+}
+.cart
+{
+  width: 4%;
+  height:40px;
+  box-sizing:border-box;
+  float:right;	
+  border-radius: 5px;
+  padding-top: 7px;
+  padding-left: 8px;
+  background-color: #52A3A3;
+  border: 1px solid black;
+  margin-top:7px;
+}
+.cart a {background-color: inherit;}
+.cart a img
+{
+	width:70%;
+	height:25px;
+	text-decoration:none;
+}
+
+.searchbox
+{
+   width:220px;
+   height: 50px;
+   float:right;
+   box-sizing:border-box;
+   margin-right: 10px;
+   padding-top: 10px;
+   padding-bottom:10px;
+}
+
+.searchbox .searchcontent
+{
+  width: 80%;
+  height: 30px;	
+  border-radius:5px;
+  float:right;
+  padding-left: 10px;
+}
+
+.d4 {box-sizing:border-box; 
+     width: 100%; 
+	 height: 900px; 
+	 float:left;
+     border-top: 1px solid #036;
+	 }
+ .hotpick {box-sizing:border-box; 
+           width: 20%; 
+		   height: 800px; 
+           float:left; 
+		   padding-left:10px;
+		   border-right:0.5px solid #CCC;
+		   background-color:#ECF5FF; }
+ .hotpick_title { width:100%;
+                  height:60px;
+				  padding-top:7px;
+                }
+ .hotpickitem {width: 96%; 
+               height: 200px;
+			   }
+ .hotpickitem .img {width:80%; 
+                    height: 160px;
+                    box-sizing:border-box;
+				    overflow:hidden; 
+					z-index:0;
+                   }
+ .img img {width:100%;
+           height:100%;
+		   transition: transform 0.7s;}
+ .hotpickitem img:hover {transform:scale(1.2,1.2);}
+ .hotpickitem a {font-size:24px;
+                 color:black;
+				 text-decoration:none;
+                 }
+ .hotpickitem a:hover {text-decoration:underline; color:#039;}
+ 
+ .content {box-sizing:border-box; 
+           width: 80%; 
+		   height: 900px; 
+           float:left; 
+		   }
+ .content .outerIframe{
+	                    border:none;
+						width:100%;
+						height:inherit;
+						text-align:center; 
+                       }
+.scrollbtn {
+	         z-index:1;
+			 width: 65px;
+			 height: 65px;
+			 background-color: #D2D2FF;
+			 opacity: 0.7;
+			 box-sizing:border-box;
+             position: fixed;
+			 bottom: 5px;
+			 right: 15px;
+			 text-align:center;}
+.scrollbtn a {
+	          color:#333;
+			  text-decoration:none;
+			  font-size: 24px;
+			  font-weight:bold;}
+.scrollbtn a:hover {color:#666;}
+.d5 {box-sizing:border-box; 
+     width: 100%; 
+	 height: 100px; 
+	 float:left;
+     background-color:black; 
+	 color:white;
+	 padding-left: 15px;}
+.d5 p a {text-decoration:none; color:#09C;}
+.d5 p a:hover {text-decoration: underline;}
+</style>
+<script>
+var i=0;
+var s="HOT PICKS";
+var arrName=["girl of all work","pilot","zebra","kokuyo","uni","pentel"];
+var arrLink=["GirlOfAllWork.html","pilot.html","zebra.html","kokuyo.html","uni.html","pentel.html"];
+
+function changeBanner1()
+{
+   var image=document.getElementById("headerImg");
+   image.src="115466.jpg"; 
+}
+
+function changeBanner2()
+{
+   var image=document.getElementById("headerImg");
+   image.src="105800.jpg"; 
+}
+
+function changeBanner3()
+{
+   var image=document.getElementById("headerImg");
+   image.src="73558.jpg"; 
+}
+
+function runHotpick()
+{
+   var arr=s.split(" ");//return array{hot,picks}
+   var tag=document.getElementById("HotPick");
+   tag.innerHTML=tag.innerHTML+" "+arr[i];
+   i++;
+   if(i>arr.length)
+   {
+	  i=0;
+	  tag.innerHTML="";   
+   }
+   window.setTimeout("runHotpick()",700);
+}
+
+function menuAdjust()
+{
+   var d=document.getElementById("menu");
+   if(window.pageYOffset>=270)
+   {
+	  d.style.top="0px";
+	  d.style.position="fixed";   
+   }
+   else
+   {
+	  d.style.position="relative";   
+   }
+}
+
+function setcount()
+{
+	var c=window.localStorage.getItem("count");
+	if(c==null)
+	{
+	   window.localStorage.setItem("count",0);	
+	}
+}
+function searchItem(x)
+{   var c=document.getElementById("iframe");
+   
+    for(var i=0;i<arrName.length;i++)
+	   if(x==arrName[i])
+			   c.src=arrLink[i];
+}
+
+</script>
+</head>
+
+<body onload="runHotpick();setcount()" onscroll="menuAdjust()">
+<a name="top"/></a>
+<div class="d1">
+ <img id="headerImg" src="115466.jpg"/>
+ <div class="changebtn">
+   <input type="button" onmouseover="changeBanner1()"/>
+   <input type="button" onmouseover="changeBanner2()"/>
+   <input type="button" onmouseover="changeBanner3()"/>
+ </div>
+ 
+</div>
+<div class="d2">
+   NUT's PEN SHOP
+</div>
+
+<div class="d3" id="menu">
+   <a href="main_innerIframe.html" target="main"><img src="61972-home-button.png" /></a>
+    <div class="dropdown">
+      <button class="dropbt">BRAND</button>
+      <div class="dropdowncontent">
+        <a href="GirlOfAllWork.html" target="main">GIRL OF ALL WORK</a>
+        <a href="kokuyo.html" target="main">KOKUYO</a>
+        <a href="pilot.html" target="main">PILOT</a>
+        <a href="pentel.html" target="main">PENTEL</a>
+        <a href="uni.html" target="main">UNI</a>
+        <a href="zebra.html" target="main">ZEBRA</a>
+      </div>
+   </div>
+   
+   <div class="dropdown">
+      <button class="dropbt">PEN</button>
+      <div class="dropdowncontent">
+        <a href="ballpointpen.html" target="main">Ballpoint Pen</a>
+        <a href="gelpen.html" target="main">Gel Pen</a>
+        <a href="highlighter.html" target="main">Highlighter</a>
+      </div>
+   </div>
+   
+    <div class="dropdown">
+      <button class="dropbt">PENCIL</button>
+      <div class="dropdowncontent">
+        <a href="mechapencil.html" target="main">Machenical Pencil</a>
+        <a href="pencillead.html" target="main">Pencil Lead</a>
+        <a href="eraser.html" target="main">Eraser</a>
+      </div>
+   </div>
+   
+    <div class="dropdown">
+      <button class="dropbt">OTHERS</button>
+      <div class="dropdowncontent">
+        <a href="pencilcase.html" target="main">Pencil Case</a>
+        <a href="stickynote.html" target="main">Sticky Notes</a>
+      </div>
+   </div>
+   
+   <div class="cart">
+     <a href="cart.html" target="main"><img src="16757-200.png"/></a>
+     <div class="cartNo"></div>
+   </div>
+   
+   <div class="searchbox">
+      <input id="searchBox" class="searchcontent" type="text"
+       placeholder="search brand" onkeypress="searchItem(this.value)"/>
+   </div>
+</div>
+
+<div class="d4">
+ <div class="hotpick">
+       <div class="hotpick_title">
+          <h2 id="HotPick"></h2>
+       </div>
+       <div class="hotpickitem">
+              <div class="img">
+                  <img src="gelpen/72447.jpg"  title="Zebra Sarasa"/>
+              </div>
+                  <a href="zebrasarasa.html" target="main">
+                  zebra sarasa ballpoint pen</a>
+       </div>
+       <br/>
+       <div class="hotpickitem">
+              <div class="img">
+                  <img src="pencilcase/57402.jpg" title="Kokuyo Neo Critz"/>
+              </div>
+              <a href="kokuyoneo.html" target="main">
+              kokuyo neo critz pencil case</a>
+       </div>
+       <br/>
+       <div class="hotpickitem">
+              <div class="img">
+                  <img src="mechapencil/106365.jpg" title="Pilot Color Eno"/>
+              </div>
+              <a href="pilotcoloreno.html" target="main">
+              pilot color eno mechanical pencil</a>
+       </div>
+  </div>
+ 
+ <div class="content">
+      <iframe id="iframe" class="outerIframe" src="main_innerIframe.html" 
+              name="main" scrolling="no">
+      </iframe>
+ </div>
+</div>
+<button class="scrollbtn"><a href="#top">UP</a></button>
+<div class="d5">
+ <p>This website is made based on another website. For more information, click 
+  <a href="https://www.jetpens.com/" target="none">www.jetpens.com</a></p>
+</div>
+</body>
+</html>

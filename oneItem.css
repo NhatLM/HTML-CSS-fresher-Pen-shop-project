@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+.Product {
+	      box-sizing:border-box;
+		  width:100%;
+		  height:320px;
+		  float:left;
+		  margin-top:10px;}
+.Product_img {
+	          width:30%;
+			  height:inherit;
+			  float:left;
+			  overflow: hidden;
+			  box-sizing:border-box;
+			  }
+.Product_img .largeimg {
+	               width:90%;
+				   height:220px;
+				   transition: all 0.5s;
+				   padding-bottom:12px;}
+.Product_img img {width:30%; 
+                  height:80px;}
+.Product_img .largeimg:hover {transform:scale(1.2,1.2);}
+.Product_name {
+	            width:70%;
+				height:inherit;
+				float: left;
+				overflow:hidden;
+				padding-left:40px;
+				font-size: 28px;
+				box-sizing:border-box;}
+.Product_name .star {color: yellow;}
+.cart1 {
+	                  border-radius:10px;
+					  background-color:rgba(80,80,80,0.8);
+					  padding: 2px;
+					  width: 140px;
+					  outline:none;
+					  text-align:center;
+					  position: relative;
+					  bottom:10px;
+					  }
+.cart1 a {
+	      font-size:16px;
+		  color:white;
+        }
+.cart1 a:hover {text-decoration:underline;
+               color:black;}
+.description {
+	          width:98%;
+			  height:280px;
+			  float:left;
+			  overflow:hidden;
+			  text-align:left;
+			  border-top:1px solid #666;
+			  border-bottom: 1px solid #666;
+			  padding-left: 30px;
+			  padding-top: 30px;
+			  }
+
+.description p {font-size:18px;padding-right:20px;}
+.description p:first-letter {padding-left: 30px;}
+
+
+ .related
+  {
+	  width: 100%;
+	  height: 230px;
+	  z-index:1;
+	  float:left;
+	  background-color:white;
+	  box-sizing:border-box;
+	  padding-top:3px;
+  }
+  .d1 { width:100%; 
+        height: 30px;
+		background-color: inherit;
+		float:left;
+		padding-left: 10px;
+		padding-bottom:4px;
+		font-size:20px;
+		box-sizing:border-box;}
+  .d2 {width:100%;
+       height: 200px; 
+	   background-color:inherit;
+	   box-sizing:border-box;
+	   float:left;}
+  .d2 div {width: 30%;
+           height:inherit;
+		   box-sizing:border-box;
+		   float:left;
+		   margin-right:15px;
+		   margin-left: 15px;
+		   }
+  .d2 div a {text-decoration:none;}
+  .d2 div a img {width:100%;height:200px;}
+		    
+  
+
